@@ -30,7 +30,7 @@ function About({}: Props) {
         viewport={{
           once: true,
         }}
-        className="relative mt-20 mb-10 flex-shrink-0 w-56 h-56 mb:w-64 md:h-95 xl:w-[500px] xl:h-[600px] overflow-hidden rounded-full md:rounded-lg"
+        className="relative mt-24 mb-0 md:mt-0 flex-shrink-0 w-56 h-56 md:w-64 md:h-95 xl:w-[500px] xl:h-[600px] overflow-hidden rounded-full md:rounded-lg"
       >
         <Image
           src={profilePicture}
@@ -38,8 +38,8 @@ function About({}: Props) {
           className="object-cover absolute top-[-19px]"
         />
       </motion.div>
-      <div className="space-y-10 px-0 md:px-10">
-        <h4 className="text-3xl text-semibold">
+      <div className="space-y-5 px-0 md:px-10">
+        <h4 className="text-2xl md:text-4xl text-semibold">
           Here is some{" "}
           <span className="underline decoration-[#333333]">text</span> for you
           to read
