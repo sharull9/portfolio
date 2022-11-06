@@ -30,7 +30,7 @@ function About({}: Props) {
         viewport={{
           once: true,
         }}
-        className="relative mt-10 mb-10 flex-shrink-0 w-56 h-56 mb:w-64 md:h-95 xl:w-[500px] xl:h-[600px] overflow-hidden rounded-full md:rounded-lg"
+        className="relative mt-20 mb-10 flex-shrink-0 w-56 h-56 mb:w-64 md:h-95 xl:w-[500px] xl:h-[600px] overflow-hidden rounded-full md:rounded-lg"
       >
         <Image
           src={profilePicture}
