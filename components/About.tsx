@@ -12,7 +12,7 @@ function About({}: Props) {
       transition={{ duration: 1.5 }}
       className="h-screen flex relative flex-col text-center md:text-left md:flex-row max-w-7xl px-10 justify-evenly mx-auto items-center"
     >
-      <h3 className="absolute top-16 uppercase tracking-[20px] text-gray-500 text-2xl">
+      <h3 className="absolute top-20 uppercase tracking-[20px] text-gray-500 text-2xl">
         About
       </h3>
       <motion.div
@@ -30,7 +30,7 @@ function About({}: Props) {
         viewport={{
           once: true,
         }}
-        className="relative mb-20 flex-shrink-0 w-56 h-56 mb:w-64 md:h-95 xl:w-[500px] xl:h-[600px] overflow-hidden rounded-full md:rounded-lg"
+        className="relative mt-10 mb-10 flex-shrink-0 w-56 h-56 mb:w-64 md:h-95 xl:w-[500px] xl:h-[600px] overflow-hidden rounded-full md:rounded-lg"
       >
         <Image
           src={profilePicture}
