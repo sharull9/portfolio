@@ -34,7 +34,7 @@ function Hero({}: Props) {
           className="rounded-full h-32 w-32 object-cover"
         />
       </motion.div>
-      <div className="z-20">
+      <div className="z-20 max-w-7xl w-full">
         <h2 className="pb-2 text-sm uppercase text-gray-500 tracking-[15px]">
           Front end developer
         </h2>

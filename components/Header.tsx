@@ -5,7 +5,7 @@ type Props = {};
 
 function Header({}: Props) {
   return (
-    <header className="sticky top-0 p-5 max-w-7xl mx-auto">
+    <header className="sticky top-0 p-5 max-w-7xl w-full mx-auto">
       <div className="flex flex-row items-center justify-between">
         {/* social icons */}
         <motion.div
