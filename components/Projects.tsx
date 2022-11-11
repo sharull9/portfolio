@@ -14,9 +14,9 @@ export default function Projects({}: Props) {
       <h3 className="absolute top-16 uppercase tracking-[20px] text-gray-500 text-2xl">
         Projects
       </h3>
-      <div className="relative max-w-7xl w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20">
+      <div className="relative max-w-7xl w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20 scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-orange-400">
         {projects.map((project, i) => (
-          <Project name={project} index={i + 1} />
+          <Project key={i} name={project} index={i + 1} />
         ))}
       </div>
       <div className="w-full absolute top-[30%] bg-slate-400/40 left-0 h-[500px] -skew-y-12"></div>

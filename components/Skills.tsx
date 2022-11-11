@@ -16,7 +16,7 @@ function Skills({}: Props) {
       <h3 className="absolute top-24 uppercase tracking-[3px] text-gray-500 text-2xl">
         Hover over on skills to see a current profieciency
       </h3>
-      <div className="max-w-7xl w-full grid grid-cols-3 gap-4 md:grid-cols-4">
+      <div className="max-w-2xl w-full flex flex-row flex-wrap gap-10">
         <Skill directionLeft />
         <Skill directionLeft />
         <Skill />
