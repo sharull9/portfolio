@@ -17,7 +17,7 @@ export default function Project({ name, index }: Props) {
         viewport={{once: true}}
         className="relative w-24 md:w-28 xl:w-32"
       >
-        <Image alt="" src={nextLogo} className="w-full h-full" />
+        <Image alt="" src={nextLogo} className="w-full h-full object-cover" />
       </motion.div>
       <div>
         <h4 className="text-xl text-center">
