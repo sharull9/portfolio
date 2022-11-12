@@ -11,7 +11,7 @@ export default function Project({ name, index }: Props) {
   return (
     <div className="w-full flex-shrink-0 snap-center flex flex-col space-y-5 items-center justify-center md:p-20 xl:p-44 h-full">
       <motion.div
-        initial={{ opacity: 0, y: -200 }}
+        initial={{ opacity: 0, y: -150 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 1.5 }}
         viewport={{once: true}}
