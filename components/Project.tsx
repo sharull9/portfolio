@@ -9,14 +9,15 @@ type Props = {
 export default function Project({ name, index }: Props) {
   const i = 0;
   return (
-    <div className="w-full flex-shrink-0 snap-center flex flex-col space-y-5 items-center justify-center p-20 md:p-44 h-full">
+    <div className="w-full flex-shrink-0 snap-center flex flex-col space-y-5 items-center justify-center md:p-20 xl:p-44 h-full">
       <motion.div
         initial={{ opacity: 0, y: -200 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 1.5 }}
         viewport={{once: true}}
+        className="relative w-24 md:w-28 xl:w-32"
       >
-        <Image alt="" src={nextLogo} />
+        <Image alt="" src={nextLogo} className="absolute w-full h-full" />
       </motion.div>
       <div>
         <h4 className="text-xl text-center">
