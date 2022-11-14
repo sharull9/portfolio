@@ -1,8 +1,11 @@
 import { motion } from "framer-motion";
-import Skill from "./Skill";
-type Props = {};
+import { Skill } from "../typing";
+import SkillItem from "./SkillItem";
+type Props = {
+  skills: Skill[];
+};
 
-function Skills({}: Props) {
+function Skills({ skills }: Props) {
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -17,14 +20,9 @@ function Skills({}: Props) {
         Hover over on skills to see a current profieciency
       </h3>
       <div className="max-w-2xl w-full flex flex-row flex-wrap gap-10">
-        <Skill directionLeft />
-        <Skill directionLeft />
-        <Skill />
-        <Skill />
-        <Skill directionLeft />
-        <Skill directionLeft />
-        <Skill />
-        <Skill />
+        {skills?.map((skill) => (
+          <SkillItem key={skill._id} skill={skill} />
+        ))}
       </div>
     </motion.div>
   );

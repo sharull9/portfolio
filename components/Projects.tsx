@@ -1,9 +1,12 @@
 import { motion } from "framer-motion";
-import Project from "./Project";
-type Props = {};
+import { Project } from "../typing";
+import ProjectItem from "./ProjectItem";
+type Props = {
+  projects: Project[];
+};
 
-export default function Projects({}: Props) {
-  const projects = ["netflix", "windbnb", "linkedin", "spotify"];
+export default function Projects({ projects }: Props) {
+  
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -16,7 +19,7 @@ export default function Projects({}: Props) {
       </h3>
       <div className="relative max-w-7xl w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20 scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-orange-400">
         {projects.map((project, i) => (
-          <Project key={i} name={project} index={i + 1} />
+          <ProjectItem key={project._id} index={i + 1} project={project} />
         ))}
       </div>
       <div className="w-full absolute top-[30%] bg-slate-400/40 left-0 h-[500px] -skew-y-12"></div>

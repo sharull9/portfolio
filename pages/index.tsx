@@ -18,13 +18,13 @@ import { fetchSkills } from "../utils/fetchSkills";
 
 type Props = {
   pageInfo: PageInfo;
-  experience: Experience[];
+  experiences: Experience[];
   skills: Skill[];
   projects: Project[];
   socials: Social[];
 };
 
-const Home = ({ pageInfo, experience, skills, projects, socials }: Props) => {
+const Home = ({ pageInfo, experiences, skills, projects, socials }: Props) => {
   return (
     <div className="bg-[rgb(26,26,26)] text-white overflow-x-hidden overflow-y-scroll snap-y snap-mandatory z-0 h-screen scroll-smooth scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-orange-400">
       <span id="backToTop"></span>
@@ -41,13 +41,13 @@ const Home = ({ pageInfo, experience, skills, projects, socials }: Props) => {
         <About pageInfo={pageInfo} />
       </section>
       <section id="experience" className="snap-center">
-        <WorkExperience experience={experience}/>
+        <WorkExperience experiences={experiences} />
       </section>
       <section id="skills" className="snap-start">
-        <Skills />
+        <Skills skills={skills} />
       </section>
       <section id="projects" className="snap-start">
-        <Projects />
+        <Projects projects={projects} />
       </section>
       <section id="contact" className="snap-start">
         <ContactMe />
@@ -65,7 +65,7 @@ export default Home;
 
 export const getStaticProps: GetStaticProps<Props> = async () => {
   const pageInfo: any = await fetchPageInfo();
-  const experience: Experience[] = await fetchExperience();
+  const experiences: Experience[] = await fetchExperience();
   const projects: Project[] = await fetchProjects();
   const skills: Skill[] = await fetchSkills();
   const socials: Social[] = await fetchSocials();
@@ -73,12 +73,12 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
   return {
     props: {
       pageInfo,
-      experience,
+      experiences,
       projects,
       skills,
       socials,
     },
 
-    revalidate: 7200,
+    revalidate: 86400,
   };
 };

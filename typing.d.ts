@@ -36,7 +36,7 @@ export interface Project extends SanityBody{
     title: string,
     _type: "project",
     image: Image,
-    linkToBuild: number,
+    linkToBuild: string,
     summary: string,
     technologies: Technology[],
 }
@@ -54,7 +54,7 @@ export interface Experience extends SanityBody{
     company: string,
     jobTitle: string,
     isCurrentlyWorking: boolean,
-    technologies: Technology,
+    tools: Technology[],
     dateStarted: date,
     dateEnded: date,
 }

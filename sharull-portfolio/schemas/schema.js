@@ -15,9 +15,9 @@ export default createSchema({
   name: 'default',
   types: schemaTypes.concat([
     pageInfo,
+    experience,
     project,
     skill,
-    experience,
     social,
   ]),
 })
