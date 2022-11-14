@@ -15,14 +15,15 @@ interface Image {
 
 export interface PageInfo extends SanityBody{
     _type: "pageInfo",
-    backgroundInformation: string,
     address: string,
+    backgroundInformation: string,
     email: string,
-    name: string,
-    role: string,
-    phoneNumber: string,
     heroImage: Image,
-    profilePic: Image
+    name: string,
+    phoneNumber: string,
+    profilePic: Image,
+    role: string,
+    socials: Social[];
 }
 
 export interface Technology extends SanityBody{
@@ -31,8 +32,14 @@ export interface Technology extends SanityBody{
     progress: number,
     title: string,
 }
-
-
+export interface Project extends SanityBody{
+    title: string,
+    _type: "project",
+    image: Image,
+    linkToBuild: number,
+    summary: string,
+    technologies: Technology[],
+}
 
 export interface Skill extends SanityBody{
     _type: "skill",

@@ -1,10 +1,13 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
-import profilePicture from "../public/profile.jpg";
+import { urlFor } from "../sanity";
+import { PageInfo } from "../typing";
 
-type Props = {};
+type Props = {
+  pageInfo: PageInfo;
+};
 
-function About({}: Props) {
+function About({ pageInfo }: Props) {
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -33,23 +36,20 @@ function About({}: Props) {
         className="relative mt-24 mb-0 md:mt-0 flex-shrink-0 w-56 h-56 md:w-64 md:h-95 xl:w-[500px] xl:h-[600px] overflow-hidden rounded-full md:rounded-lg"
       >
         <Image
-          src={profilePicture}
+          src={urlFor(pageInfo?.profilePic).url()}
           alt="userPhoto"
+          fill
+          sizes="100%"
+          priority
           className="object-cover absolute top-[-19px]"
         />
       </motion.div>
       <div className="space-y-5 px-0 md:px-10">
         <h4 className="text-2xl md:text-4xl text-semibold">
-          Here is some{" "}
-          <span className="underline decoration-[#333333]">text</span> for you
-          to read
+          Something{" "}
+          <span className="underline decoration-[#333333]">About</span> me
         </h4>
-        <p className="text-base">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus
-          provident officiis consequatur ut. Porro suscipit ab totam modi aut
-          debitis veritatis vel voluptatum sapiente animi, minus vitae
-          voluptatem eum laudantium.
-        </p>
+        <p className="text-base">{pageInfo.backgroundInformation}</p>
       </div>
     </motion.div>
   );
